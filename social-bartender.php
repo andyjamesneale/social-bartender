@@ -24,7 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
 */
 
-define( 'SH_SB_DIR', plugin_dir_url(__FILE__) );
+define( 'SH_SB_DIR', get_template_directory_uri()  . "/plugins/social-bartender/" );
 
 add_action('init',  'sh_sb_init');
 
@@ -128,8 +128,8 @@ function social_bartender( $link_before = '', $link_after = '', $echo = 1 ){
 		return $output;
 }
 
-require_once(WP_PLUGIN_DIR . "/" . basename(dirname(__FILE__)) . "/settings.php");
-require_once(WP_PLUGIN_DIR . "/" . basename(dirname(__FILE__)) . "/help.php");
-require_once(WP_PLUGIN_DIR . "/" . basename(dirname(__FILE__)) . "/widget.php");
+require_once(TEMPLATEPATH  . "/plugins/".basename(dirname(__FILE__))."/settings.php");
+require_once(TEMPLATEPATH  . "/plugins/".basename(dirname(__FILE__))."/help.php");
+require_once(TEMPLATEPATH  . "/plugins/".basename(dirname(__FILE__))."/widget.php");
 
 ?>
